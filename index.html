@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AI-JM — Speaking & Consulting</title>
+    <meta
+      name="description"
+      content="Jeremy Mumford. AI speaking and consulting. Book at bookings@ai-jm.com."
+    />
+    <meta name="theme-color" content="#0b0a08" />
+    <link rel="canonical" href="https://ai-jm.com/" />
+    <meta property="og:title" content="AI-JM — Speaking & Consulting" />
+    <meta
+      property="og:description"
+      content="Jeremy Mumford. AI speaking and consulting. Book at bookings@ai-jm.com."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ai-jm.com/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0a08;
+        --ink: #f4efe6;
+        --muted: #9c958a;
+        --gold: #e7c48a;
+        --gold-hot: #f3ddb0;
+        --ink-deep: #1a140c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
+        overflow: hidden;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        height: 100svh;
+        overflow: hidden;
+        overscroll-behavior: none;
+        color: var(--ink);
+        background:
+          radial-gradient(900px 520px at 8% 78%, rgba(231, 196, 138, 0.11), transparent 58%),
+          radial-gradient(720px 420px at 100% 0%, rgba(255, 250, 240, 0.05), transparent 46%),
+          var(--bg);
+        color-scheme: dark;
+        font-family: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.22;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+      }
+
+      ::selection {
+        background: var(--gold);
+        color: var(--ink-deep);
+      }
+
+      main {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        padding:
+          max(1.25rem, env(safe-area-inset-top))
+          max(1.35rem, env(safe-area-inset-right))
+          max(1.25rem, env(safe-area-inset-bottom))
+          max(1.35rem, env(safe-area-inset-left));
+      }
+
+      @media (min-width: 800px) {
+        main {
+          padding:
+            max(2.5rem, env(safe-area-inset-top))
+            max(4rem, env(safe-area-inset-right))
+            max(2.5rem, env(safe-area-inset-bottom))
+            max(4rem, env(safe-area-inset-left));
+        }
+      }
+
+      header,
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .mark,
+      .kicker,
+      .who {
+        margin: 0;
+        font-size: clamp(0.68rem, 1.6vw, 0.82rem);
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mark {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .dot {
+        width: 0.42rem;
+        height: 0.42rem;
+        border-radius: 50%;
+        background: var(--gold);
+        flex: none;
+      }
+
+      .kicker,
+      .who {
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        align-self: center;
+        max-width: 100%;
+        font-family: "Instrument Serif", "Iowan Old Style", Palatino, Georgia, serif;
+        font-size: clamp(4.75rem, min(34vw, 34svh), 26rem);
+        font-weight: 400;
+        line-height: 0.86;
+        letter-spacing: -0.045em;
+      }
+
+      h1 span {
+        display: block;
+        white-space: nowrap;
+      }
+
+      h1 .accent {
+        margin-left: 0.42em;
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .book {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3.25rem;
+        padding: 0.85rem 1.7rem;
+        border-radius: 999px;
+        background: var(--gold);
+        color: var(--ink-deep);
+        font: inherit;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        text-transform: none;
+        transition: background 180ms ease, transform 180ms ease;
+      }
+
+      .book:hover {
+        background: var(--gold-hot);
+        transform: translateY(-2px);
+      }
+
+      .book:active {
+        transform: translateY(0);
+      }
+
+      .book:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 640px) {
+        header {
+          align-items: flex-start;
+        }
+
+        .kicker {
+          text-align: right;
+          letter-spacing: 0.12em;
+        }
+
+        footer {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.9rem;
+        }
+
+        .book {
+          width: 100%;
+        }
+      }
+
+      @media (max-height: 560px) {
+        h1 {
+          font-size: clamp(3rem, 18svh, 6.5rem);
+        }
+
+        main {
+          padding-top: max(0.85rem, env(safe-area-inset-top));
+          padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .book {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="mark"><span class="dot" aria-hidden="true"></span>AI—JM</p>
+        <p class="kicker">Speaking &amp; consulting</p>
+      </header>
+      <h1>
+        <span>AI that</span>
+        <span class="accent">ships.</span>
+      </h1>
+      <footer>
+        <p class="who">Jeremy Mumford</p>
+        <a class="book" href="mailto:bookings@ai-jm.com">Book now</a>
+      </footer>
+    </main>
+  </body>
+</html>
